@@ -13,7 +13,7 @@ public class EmployeeDao {
   
   String INSERT_USER_SQL = 
 		  "INSERT INTO employee"+
-		  "(id, first_name, last_name, username, password, address, contact)" +
+		  "(id, first_name, last_name, username, password, address, contact) VALUES " +
 		  "(?,?,?,?,?,?,?)";
   
   int result = 0;
@@ -25,7 +25,7 @@ public class EmployeeDao {
 		  PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_SQL)){
 	      preparedStatement.setInt(1,1);
 	      preparedStatement.setString(2, employee.getFirstName());
-	      preparedStatement.setString(2, employee.getLastName());
+	      preparedStatement.setString(3, employee.getLastName());
 	      preparedStatement.setString(4, employee.getUsername());
 	      preparedStatement.setString(5, employee.getPassword());
 	      preparedStatement.setString(6, employee.getAddress());

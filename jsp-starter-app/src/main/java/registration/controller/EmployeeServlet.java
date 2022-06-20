@@ -2,12 +2,13 @@ package registration.controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+//import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import registration.dao.EmployeeDao;
 import registration.model.Employee;
@@ -36,7 +37,7 @@ public class EmployeeServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INFO/views/employeeregister.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/employeeregister.jsp");
 		dispatcher.forward(request, response);
 		
 	}
@@ -48,7 +49,7 @@ public class EmployeeServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
-		String userName = request.getParameter("userName");
+		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 		String address = request.getParameter("address");
 		String contact = request.getParameter("contact");
@@ -67,7 +68,7 @@ public class EmployeeServlet extends HttpServlet {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INFO/views/employeedetails.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/employeedetails.jsp");
 		dispatcher.forward(request, response);
 		
 		
