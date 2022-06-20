@@ -12,6 +12,15 @@ JavaServer Pages (JSP) is a Java standard technology that enables you to write d
 - Micro-service with JSP
 - Route protecting with JSP
 
+## Technologies to cover
+
+- Apache Tomcat Server
+- JDBC with Mysql
+- Hibernate
+- JPA
+- Servlets
+... etc
+
 
 ## Author
 
